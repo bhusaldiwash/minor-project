@@ -1,0 +1,236 @@
+/* colors with their variables names
+one for light mode and another for dark mode
+ */
+:root {
+  --bg: #EAF1F6;
+  --text: #16243B;
+  --text-light: #5C6B7A;
+  --accent: #3E6FE0;
+  --border: #C7D3DD;
+  --surface: #FFFFFF;
+}
+
+html[data-theme="dark"] {
+  --bg: #0E1622;
+  --text: #EAF1F6;
+  --text-light: #9FB0C2;
+  --accent: #6C9BFF;
+  --border: #2A3B52;
+  --surface: #16263B;
+}
+
+/* set upping the overall home page with features which are not changing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* navbar section or header also sometimes somewhere */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 6%;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.dot {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: none;
+  font-size: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* hero section occuping main space of home page
+for  centere of attraction */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 6%;
+  min-height: 70vh;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.tagline {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0 0 18px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.intro {
+  color: var(--text-light);
+  max-width: 440px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.skills {
+  display: flex;
+  gap: 10px;
+}
+
+.skills span {
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* hero photo section */
+.hero-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-placeholder {
+  width: 280px;
+  height: 280px;
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-weight: 500;
+}
+.profile-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px;
+}
+
+/* bottom or footer sections */
+footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/*  trying to add some responsiveness as much i know
+
+ */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .intro {
+    margin: 0 auto 30px;
+  }
+}
