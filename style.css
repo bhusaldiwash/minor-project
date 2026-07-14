@@ -213,6 +213,82 @@ footer {
   color: var(--accent);
 }
 
+
+/* 
+About page 
+
+*/
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 6% 100px;
+}
+
+.page-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-intro h1 {
+  margin: 6px 0 0;
+}
+
+.block {
+  margin-bottom: 50px;
+}
+
+.block h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.bio {
+  margin-bottom: 40px;
+  font-size: 17px;
+  color: var(--text-light);
+}
+
+/* Education card */
+.edu-card {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.edu-course {
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.edu-college {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+}
+
+.skill-card {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
 /*  trying to add some responsiveness as much i know
 
  */
