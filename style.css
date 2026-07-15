@@ -289,6 +289,25 @@ About page
   border-color: var(--accent);
 }
 
+/* Accordion (built with native <details>/<summary>, no JS needed) */
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  background-color: var(--surface);
+}
+
+.accordion-item summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.accordion-item p {
+  margin: 12px 0 0;
+  color: var(--text-light);
+}
+
 /*  trying to add some responsiveness as much i know
 
  */
