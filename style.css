@@ -308,6 +308,16 @@ About page
   color: var(--text-light);
 }
 
+.about-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.about-cta p {
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
 /*  trying to add some responsiveness as much i know
 
  */
